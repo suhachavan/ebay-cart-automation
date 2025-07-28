@@ -33,10 +33,10 @@ public class BaseElementTest {
 		
 	}
 	
-	 @BeforeClass
-	    public void setupReport() {
-	        extent = ExtendReportManager.getInstance();
-	    }
+	/*
+	 * @BeforeClass public void setupReport() { extent =
+	 * ExtendReportManager.getInstance(); }
+	 */
 	
 	
 	 @AfterTest
