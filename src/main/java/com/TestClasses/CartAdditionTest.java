@@ -20,10 +20,10 @@ public class CartAdditionTest extends BaseElementTest {
 	
 	@Test(description = "Verify Cart Addition")
 	public void SearchBook() throws InterruptedException {
- 		Report.test = extent.createTest("Verify Search Operation");
+ 		//Report.test = extent.createTest("Verify Search Operation");
  		CartPage cartpage = new CartPage(driver);
  		cartpage.searchBooks();
- 	 
+ 	
  		cartpage.ClickOntheFirstLink();
  		
  		cartpage.ClickAddtoCart();

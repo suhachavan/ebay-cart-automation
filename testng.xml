@@ -3,7 +3,7 @@
     <test name="Cart Test">
         <classes>
             <class name="com.TestClasses.CartAdditionTest"/>
-          <!-- <class name="api.VerifyAPIBitcoin"/>-->
+            <class name="api.VerifyAPIBitcoin"/>
         </classes>
     </test>
 </suite>

@@ -22,14 +22,14 @@ public class VerifyAPIBitcoin extends BaseElementTest {
 	@Test
     public void validateBitcoinMarketData() {
 		 config = ConfigReader.loadProperties();
-		 Report.test = extent.createTest("Verify Bitcoin Market Data");
+		 //Report.test = extent.createTest("Verify Bitcoin Market Data");
 		 System.out.println("Connecting to CoinGecko API...");
         Response response = RestAssured
                 .given()
                 .when()
                 .get(config.getProperty("BaseURI"));
         System.out.println("✅ Connection successful. Status Code: " + response.getStatusCode());
-       
+      
         
         // Assert HTTP response status
         assertTrue(response.getStatusCode() == 200, "Expected 200 OK response");
