@@ -72,15 +72,17 @@ public void VerifyCartItemsNumber(String ExpOutcome) throws InterruptedException
 	Thread.sleep(5000);
 	driver.findElement(cartIconNum).isDisplayed();
 	String numbr = driver.findElement(cartIconNum).getText();
-	Report.log("Cart Shows as :"+numbr, Status.INFO);
+	logger.info("Cart Shows as :"+numbr, Status.INFO);
 	softassert.assertEquals(numbr, ExpOutcome);
 	softassert.assertAll();
 	
 	 
 	 if (numbr.equalsIgnoreCase(ExpOutcome)) {
          Report.log("Expected Items Matched In the Cart", Status.PASS);
+         logger.info("Expected Items Matched In the Cart");
      } else {
-         Report.log("Expected Items Matched In the Cart", Status.FAIL);
+         Report.log("Expected Items Did Not Match In the Cart", Status.FAIL);
+         logger.error("Expected Items Did Not Match In the Cart");
      }
 }
 
